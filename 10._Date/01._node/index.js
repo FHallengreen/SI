@@ -1,0 +1,1 @@
+console.log(new Date()); // Standard ISO 8601
