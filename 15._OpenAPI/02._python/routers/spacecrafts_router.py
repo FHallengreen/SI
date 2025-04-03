@@ -25,11 +25,7 @@ async def get_spacecrafts():
     "/api/spacecrafts/{spacecraft_id}", tags=["spacecraft"], response_model=Spacecraft)
 def get_spacecraft_by_id(spacecraft_id: int):
     for spacecraft in spacecrafts:
-        if spacecraft.id == spacecraft_id:
+        if spacecraft.id == spacecraft.id:
             return spacecraft
     raise HTTPException(status_code=404, detail="Spacecraft not found")
-
-@router.post("/api/spacecrafts", tags=["spacecraft"], response_model=Spacecraft)
-def create_spacecraft(spacecraft: Spacecraft):
-    spacecrafts.append(spacecraft)
-    return spacecraft
+        
